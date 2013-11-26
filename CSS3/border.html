@@ -3,27 +3,56 @@
   <head>
     <style>
       .div_border{ 
-        height:30px;
+        height:60px;
         background:#283848;
         text-align:center;
         color:red;
         border:1px solid; 
-        border-radius:15px;
+        border-radius:25px;
         box-shadow:10px 10px 5px #888;
       }
-       .div_background{ 
-        height:30px;
-        background:#283848;
-        text-align:center;
-        color:red;
+       .div_background{   
+        height: 60px; 
+        width: 750px;        
         border:1px solid; 
         border-radius:15px;
         box-shadow:10px 10px 5px #888;
+        /*background:url(a.gif),url(b.png);*/
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+        background-origin:content-box;
+        background-origin:padding-box;
+        background-origin:border-box;
+        font-size: 2.0em;
+        text-align:center;
+        text-shadow: 1px 1px 1px red;
+        color:blue;
+      }
+      #text{
+        width: 160px;
+        font-size: 3em;
+        font-weight:bold;
+        color: white;
+        text-shadow:4px 4px 4px blue;
+        word-wrap: break-word;
+        background: linear-gradient(red, yellow);
+        background: linear-gradient( to top left,red, yellow);
+        background: linear-gradient(45deg,red,gray,green,blue, yellow);
+        background: linear-gradient(to right, rgba(255,0,0,0) 2%, rgba(255,0,0,1) 20%);
+        background: radial-gradient(circle, red, yellow, green);
+        background: radial-gradient(6% 5%, farthest-side,blue,green,yellow,black);
+      }
+      #transforms{
+        
       }
     </style>
   </head>
   <body>
     <div class="div_border">this is a div which has a border-radius .</div>
+    <br />
     <div class="div_background">this is a div which has a background-image .</div>
+    <br />
+    <p id="text">xiao bu dian, welcome to w3school!</p>
+    <div id = "transforms">CSS3 Transforms.</div>
   </body>
 </html>
