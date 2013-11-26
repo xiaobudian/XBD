@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AQIWeb", "AQIWeb\AQIWeb.csproj", "{54DE9738-9649-4894-BE7A-EE0263AB8B87}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AQIWeb.Tests", "AQIWeb.Tests\AQIWeb.Tests.csproj", "{3B752F8B-D69F-4FC0-93D9-6DF38CCBD2AC}"
