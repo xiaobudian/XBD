@@ -11,13 +11,13 @@ namespace GetAQIData
     class Program
     {
         //每隔一段时间读取一次数据
-        private static int seconds = 60;
+        private static int seconds = 15 * 60;
         private static Timer timer = null;
         private static int count = 1;
         static void Main(string[] args)
         {
             timer = new Timer();
-            timer.Interval = seconds * 1000;
+            timer.Interval = 10;
             timer.Enabled = true;
             timer.Elapsed += new ElapsedEventHandler(timer_Elapsed);
             timer.Start();
@@ -26,15 +26,20 @@ namespace GetAQIData
 
         static void timer_Elapsed(object sender, ElapsedEventArgs e)
         {
+            timer.Interval = seconds * 1000;
             GetData();
             Console.WriteLine(count++);
+
         }
 
         private static void GetData()
         {
             try
             {
-                HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://www.pm25.in/api/querys/all_cities.json");
+                //public:5j1znBVAsnSf5xQyNQyq
+                //mykey:bVTzV2gJJK43SKqQaioi
+                string url = "http://www.pm25.in/api/querys/all_cities.json?token=bVTzV2gJJK43SKqQaioi";
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 
                 request.UseDefaultCredentials = false;
                 WebResponse response = request.GetResponse();//返回对 Internet 请求的响应。
@@ -44,13 +49,14 @@ namespace GetAQIData
                 resStream.Close();//关闭当前流并释放与之关联的所有资源
                 sr.Close(); //关闭 System.IO.StreamReader 对象和基础流，并释放与读取器关联的所有系统资源
 
-                string path = @"D:\Studio\GitHub\XBD\AQI\GetAQIData\bin\Debug\data\";
+                string path = AppDomain.CurrentDomain.BaseDirectory + "data\\";
                 if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);
                 }
                 if (result.Contains("time_point"))
                 {
+                    Console.WriteLine(result.Substring(0, 20));
                     string time = result.Substring(result.IndexOf("time_point") + "time_point".Length + 3, 19);
                     DateTime dt = DateTime.Parse(time);
                     string fileName = dt.ToString("yyyyMMddHH") + ".txt";
@@ -62,10 +68,14 @@ namespace GetAQIData
                         File.AppendAllText(path + fileName, result + "\r\n", Encoding.UTF8);
                     }
                 }
+                else
+                {
+                    Console.WriteLine(result);
+                }
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message + " Time: " + DateTime.Now);
+                Console.WriteLine(ex.Message);
             }
 
         }
