@@ -46,6 +46,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\data\2013112708.txt" />
+    <Content Include="bin\Debug\data\2013112709.txt" />
+    <Content Include="bin\Debug\data\2013112711.txt" />
+    <Content Include="bin\Debug\data\2013112712.txt" />
+    <Content Include="bin\Debug\data\2013112713.txt" />
+    <Content Include="bin\Debug\data\2013112714.txt" />
+    <Content Include="bin\Debug\data\2013112715.txt" />
+    <Content Include="bin\Debug\data\2013112716.txt" />
+    <Content Include="bin\Debug\data\2013112717.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
