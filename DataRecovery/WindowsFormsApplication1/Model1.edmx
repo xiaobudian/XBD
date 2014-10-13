@@ -1,0 +1,2245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="bcbzModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="bcbzModelStoreContainer">
+          <EntitySet Name="Bank" EntityType="bcbzModel.Store.Bank" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BetOrder" EntityType="bcbzModel.Store.BetOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BZSession" EntityType="bcbzModel.Store.BZSession" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CustomerService" EntityType="bcbzModel.Store.CustomerService" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CustomerServiceCategory" EntityType="bcbzModel.Store.CustomerServiceCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DividendApply" EntityType="bcbzModel.Store.DividendApply" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DividendPercentage" EntityType="bcbzModel.Store.DividendPercentage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DividendRecord" EntityType="bcbzModel.Store.DividendRecord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FollowOrder" EntityType="bcbzModel.Store.FollowOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GlobalSetting" EntityType="bcbzModel.Store.GlobalSetting" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="History" EntityType="bcbzModel.Store.History" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InnerLotteryOpenTime" EntityType="bcbzModel.Store.InnerLotteryOpenTime" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lottery" EntityType="bcbzModel.Store.Lottery" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LotteryCategory" EntityType="bcbzModel.Store.LotteryCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LotteryOpen" EntityType="bcbzModel.Store.LotteryOpen" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LotteryOpenTime" EntityType="bcbzModel.Store.LotteryOpenTime" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LotteryPlayingMethodPrize" EntityType="bcbzModel.Store.LotteryPlayingMethodPrize" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Message" EntityType="bcbzModel.Store.Message" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlatformDividend" EntityType="bcbzModel.Store.PlatformDividend" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlayingCategory" EntityType="bcbzModel.Store.PlayingCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlayingMethod" EntityType="bcbzModel.Store.PlayingMethod" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PlayTogether" EntityType="bcbzModel.Store.PlayTogether" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServerTime" EntityType="bcbzModel.Store.ServerTime" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SystemBankAccount" EntityType="bcbzModel.Store.SystemBankAccount" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SystemPost" EntityType="bcbzModel.Store.SystemPost" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserAdvice" EntityType="bcbzModel.Store.UserAdvice" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserBankAccount" EntityType="bcbzModel.Store.UserBankAccount" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserIncome" EntityType="bcbzModel.Store.UserIncome" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserMessage" EntityType="bcbzModel.Store.UserMessage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserPlayTogetherRecord" EntityType="bcbzModel.Store.UserPlayTogetherRecord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserPlayTogetherState" EntityType="bcbzModel.Store.UserPlayTogetherState" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WithdrawDeposit" EntityType="bcbzModel.Store.WithdrawDeposit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="YeepayRecharge" EntityType="bcbzModel.Store.YeepayRecharge" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="YCViewUser" EntityType="bcbzModel.Store.YCViewUser" store:Type="Views" store:Schema="dbo" store:Name="YCViewUser">
+            <DefiningQuery>SELECT 
+      [YCViewUser].[AppId] AS [AppId], 
+      [YCViewUser].[UserId] AS [UserId], 
+      [YCViewUser].[ParentUserId] AS [ParentUserId], 
+      [YCViewUser].[NickName] AS [NickName], 
+      [YCViewUser].[UserType] AS [UserType], 
+      [YCViewUser].[Online] AS [Online], 
+      [YCViewUser].[Status] AS [Status], 
+      [YCViewUser].[Rebate] AS [Rebate], 
+      [YCViewUser].[UnfixedRebate] AS [UnfixedRebate], 
+      [YCViewUser].[TotalCent] AS [TotalCent], 
+      [YCViewUser].[FrozenCent] AS [FrozenCent], 
+      [YCViewUser].[AvailableCent] AS [AvailableCent], 
+      [YCViewUser].[CreatedTime] AS [CreatedTime], 
+      [YCViewUser].[UpdatedTime] AS [UpdatedTime], 
+      [YCViewUser].[LoginTime] AS [LoginTime], 
+      [YCViewUser].[LoginIp] AS [LoginIp], 
+      [YCViewUser].[PenalizeStartTime] AS [PenalizeStartTime], 
+      [YCViewUser].[IntervalDay] AS [IntervalDay], 
+      [YCViewUser].[BetAmount] AS [BetAmount], 
+      [YCViewUser].[FanDianChengFaRebate] AS [FanDianChengFaRebate], 
+      [YCViewUser].[GroupName] AS [GroupName], 
+      [YCViewUser].[GroupId] AS [GroupId], 
+      [YCViewUser].[LoginName] AS [LoginName], 
+      [YCViewUser].[Rebate11x5] AS [Rebate11x5], 
+      [YCViewUser].[Rebate11x5Unfixed] AS [Rebate11x5Unfixed]
+      FROM [dbo].[YCViewUser] AS [YCViewUser]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_BetOrder_LotteryId" Association="bcbzModel.Store.FK_BetOrder_LotteryId">
+            <End Role="Lottery" EntitySet="Lottery" />
+            <End Role="BetOrder" EntitySet="BetOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BetOrder_PlayingMethodId" Association="bcbzModel.Store.FK_BetOrder_PlayingMethodId">
+            <End Role="PlayingMethod" EntitySet="PlayingMethod" />
+            <End Role="BetOrder" EntitySet="BetOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DividendRecord_DividendRecord" Association="bcbzModel.Store.FK_DividendRecord_DividendRecord">
+            <End Role="DividendPercentage" EntitySet="DividendPercentage" />
+            <End Role="DividendRecord" EntitySet="DividendRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FollowOrder_OrderId" Association="bcbzModel.Store.FK_FollowOrder_OrderId">
+            <End Role="BetOrder" EntitySet="BetOrder" />
+            <End Role="FollowOrder" EntitySet="FollowOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InnerLotteryOpenTime_LotteryId" Association="bcbzModel.Store.FK_InnerLotteryOpenTime_LotteryId">
+            <End Role="Lottery" EntitySet="Lottery" />
+            <End Role="InnerLotteryOpenTime" EntitySet="InnerLotteryOpenTime" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lottery_CategoryId" Association="bcbzModel.Store.FK_Lottery_CategoryId">
+            <End Role="LotteryCategory" EntitySet="LotteryCategory" />
+            <End Role="Lottery" EntitySet="Lottery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LotteryOpen_LotteryId" Association="bcbzModel.Store.FK_LotteryOpen_LotteryId">
+            <End Role="Lottery" EntitySet="Lottery" />
+            <End Role="LotteryOpen" EntitySet="LotteryOpen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LotteryOpenTime_LotteryId" Association="bcbzModel.Store.FK_LotteryOpenTime_LotteryId">
+            <End Role="Lottery" EntitySet="Lottery" />
+            <End Role="LotteryOpenTime" EntitySet="LotteryOpenTime" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LotteryPlayingMethodPrize_LotteryId" Association="bcbzModel.Store.FK_LotteryPlayingMethodPrize_LotteryId">
+            <End Role="Lottery" EntitySet="Lottery" />
+            <End Role="LotteryPlayingMethodPrize" EntitySet="LotteryPlayingMethodPrize" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LotteryPlayingMethodPrize_PlayingMethodId" Association="bcbzModel.Store.FK_LotteryPlayingMethodPrize_PlayingMethodId">
+            <End Role="PlayingMethod" EntitySet="PlayingMethod" />
+            <End Role="LotteryPlayingMethodPrize" EntitySet="LotteryPlayingMethodPrize" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlayingMethod_CategoryId" Association="bcbzModel.Store.FK_PlayingMethod_CategoryId">
+            <End Role="PlayingCategory" EntitySet="PlayingCategory" />
+            <End Role="PlayingMethod" EntitySet="PlayingMethod" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlayTogether_BetOrderId" Association="bcbzModel.Store.FK_PlayTogether_BetOrderId">
+            <End Role="BetOrder" EntitySet="BetOrder" />
+            <End Role="PlayTogether" EntitySet="PlayTogether" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemBankAccount_BankId" Association="bcbzModel.Store.FK_SystemBankAccount_BankId">
+            <End Role="Bank" EntitySet="Bank" />
+            <End Role="SystemBankAccount" EntitySet="SystemBankAccount" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserBankAccount_BankId" Association="bcbzModel.Store.FK_UserBankAccount_BankId">
+            <End Role="Bank" EntitySet="Bank" />
+            <End Role="UserBankAccount" EntitySet="UserBankAccount" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserIncome_BankAccountId" Association="bcbzModel.Store.FK_UserIncome_BankAccountId">
+            <End Role="UserBankAccount" EntitySet="UserBankAccount" />
+            <End Role="UserIncome" EntitySet="UserIncome" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserMessage_MessageId" Association="bcbzModel.Store.FK_UserMessage_MessageId">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="UserMessage" EntitySet="UserMessage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPlayTogetherRecord_PlayTogether" Association="bcbzModel.Store.FK_UserPlayTogetherRecord_PlayTogether">
+            <End Role="PlayTogether" EntitySet="PlayTogether" />
+            <End Role="UserPlayTogetherRecord" EntitySet="UserPlayTogetherRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WithdrawDeposit_BankAccountId" Association="bcbzModel.Store.FK_WithdrawDeposit_BankAccountId">
+            <End Role="UserBankAccount" EntitySet="UserBankAccount" />
+            <End Role="WithdrawDeposit" EntitySet="WithdrawDeposit" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="Description" Type="nvarchar" MaxLength="120" />
+          <Property Name="URL" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="ICONURL" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="BetOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="LotteryId" Type="int" Nullable="false" />
+          <Property Name="OpenSequence" Type="bigint" Nullable="false" />
+          <Property Name="PlayingMethodId" Type="int" Nullable="false" />
+          <Property Name="BetTimes" Type="int" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BetCent" Type="int" Nullable="false" />
+          <Property Name="WinCent" Type="int" Nullable="false" />
+          <Property Name="Rebate" Type="int" Nullable="false" />
+          <Property Name="BetMode" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="WinFlag" Type="int" />
+          <Property Name="OrderTime" Type="datetime" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UpdateUserId" Type="bigint" />
+          <Property Name="UserCurrentRebate" Type="int" Nullable="false" />
+          <Property Name="PrizeModeFull" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="BZSession">
+          <Key>
+            <PropertyRef Name="SessionKey" />
+          </Key>
+          <Property Name="SessionKey" Type="nvarchar" Nullable="false" MaxLength="64" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="AvailableFuncIds" Type="nvarchar" MaxLength="1024" />
+          <Property Name="CreatedTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CustomerService">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="UserIdAnsweredBy" Type="bigint" Nullable="false" />
+          <Property Name="Content" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CreatedTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="CustomerServiceCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreatedTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DividendApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="StartTime" Type="datetime" Nullable="false" />
+          <Property Name="EndTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DividendPercentage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="LossAmount" Type="decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="Percentage" Type="decimal" Nullable="false" Precision="6" Scale="2" />
+          <Property Name="CreateTime" Type="datetime" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DividendRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="StartTime" Type="datetime" Nullable="false" />
+          <Property Name="EndTime" Type="datetime" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="ApplyId" Type="bigint" Nullable="false" />
+          <Property Name="PercentageId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FollowOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="OrderId" Type="bigint" Nullable="false" />
+          <Property Name="FollowSequences" Type="nvarchar" Nullable="false" MaxLength="3000" />
+          <Property Name="Status" Type="int" />
+          <Property Name="StopOnShot" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GlobalSetting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="ValueType" Type="int" Nullable="false" />
+          <Property Name="Value" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="CreatedTime" Type="datetime" />
+          <Property Name="FunctionName" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="Content" Type="nvarchar" MaxLength="1200" />
+          <Property Name="Content2" Type="nvarchar" MaxLength="1200" />
+        </EntityType>
+        <EntityType Name="InnerLotteryOpenTime">
+          <Key>
+            <PropertyRef Name="LotteryId" />
+            <PropertyRef Name="OpenSequence" />
+          </Key>
+          <Property Name="LotteryId" Type="int" Nullable="false" />
+          <Property Name="OpenSequence" Type="bigint" Nullable="false" />
+          <Property Name="OpenHour" Type="int" Nullable="false" />
+          <Property Name="OpenMinute" Type="int" Nullable="false" />
+          <Property Name="DaysAddSequence" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lottery">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="16" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="OpenMode" Type="int" Nullable="false" />
+          <Property Name="OpenNumberCount" Type="int" Nullable="false" />
+          <Property Name="StartNumber" Type="int" Nullable="false" />
+          <Property Name="EndNumber" Type="int" Nullable="false" />
+          <Property Name="MaxSequence" Type="int" Nullable="false" />
+          <Property Name="NextOpenSequence" Type="bigint" Nullable="false" />
+          <Property Name="PrizeMoney" Type="int" Nullable="false" />
+          <Property Name="OpenDelaySeconds" Type="int" Nullable="false" />
+          <Property Name="MaxPrize" Type="int" Nullable="false" />
+          <Property Name="MaxPrizeRebate" Type="int" Nullable="false" />
+          <Property Name="MinPrize" Type="int" Nullable="false" />
+          <Property Name="MinPrizeRebate" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LotteryCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="16" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LotteryOpen">
+          <Key>
+            <PropertyRef Name="LotteryId" />
+            <PropertyRef Name="OpenningSequence" />
+          </Key>
+          <Property Name="LotteryId" Type="int" Nullable="false" />
+          <Property Name="OpenningSequence" Type="bigint" Nullable="false" />
+          <Property Name="OpenMode" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="OpenningNumbers" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LotteryOpenTime">
+          <Key>
+            <PropertyRef Name="LotteryId" />
+          </Key>
+          <Property Name="LotteryId" Type="int" Nullable="false" />
+          <Property Name="OpenSequence" Type="bigint" Nullable="false" />
+          <Property Name="OpenTime" Type="datetime" Nullable="false" />
+          <Property Name="OpenNumbers" Type="nchar" MaxLength="5" />
+          <Property Name="OpenningSequence" Type="bigint" Nullable="false" />
+          <Property Name="OpenningTime" Type="datetime" Nullable="false" />
+          <Property Name="SaleSequence" Type="bigint" Nullable="false" />
+          <Property Name="SaleEndTime" Type="datetime" Nullable="false" />
+          <Property Name="OpenDelaySeconds" Type="int" Nullable="false" />
+          <Property Name="FrozenSeconds" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LotteryPlayingMethodPrize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LotteryId" Type="int" Nullable="false" />
+          <Property Name="PlayingMethodId" Type="int" Nullable="false" />
+          <Property Name="PrizeMoney" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SenderId" Type="bigint" Nullable="false" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Content" Type="nvarchar(max)" />
+          <Property Name="Category" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlatformDividend">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="Month" />
+          </Key>
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="Month" Type="int" Nullable="false" />
+          <Property Name="ProfitCent" Type="int" />
+          <Property Name="ReturnCentFromLower" Type="int" />
+          <Property Name="LowerProfitCent" Type="int" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="StatusTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlayingCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="Description" Type="nvarchar" MaxLength="64" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="PlayingMethod">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="ShortName" Type="nvarchar" Nullable="false" MaxLength="16" />
+          <Property Name="Description" Type="nvarchar" MaxLength="64" />
+          <Property Name="Status" Type="int" />
+          <Property Name="PrizeMoney" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlayTogether">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BetOrderId" Type="bigint" Nullable="false" />
+          <Property Name="Publiced" Type="bit" Nullable="false" />
+          <Property Name="Rebate" Type="int" Nullable="false" />
+          <Property Name="WinCent" Type="int" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="WinPercent" Type="nvarchar" MaxLength="1000" />
+          <Property Name="OrderTime" Type="datetime" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ServerTime">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LotteryServerTime" Type="datetime" Nullable="false" />
+          <Property Name="LocalTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SystemBankAccount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BankId" Type="int" Nullable="false" />
+          <Property Name="AccountNo" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="AccountName" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SystemPost">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Content" Type="nvarchar" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserAdvice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="32" />
+          <Property Name="Content" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CreatedTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserBankAccount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="BankId" Type="int" Nullable="false" />
+          <Property Name="AccountNo" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="AccountName" Type="nvarchar" Nullable="false" MaxLength="120" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="Branch" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="UserIncome">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="IncomeType" Type="int" Nullable="false" />
+          <Property Name="FromId" Type="bigint" />
+          <Property Name="IncomeCent" Type="int" Nullable="false" />
+          <Property Name="BankAccountId" Type="int" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+          <Property Name="BankOprNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="CurrentAvailableCent" Type="int" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="OrderId" Type="bigint" />
+          <Property Name="Source" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserMessage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="MessageId" Type="bigint" Nullable="false" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserPlayTogetherRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PlayTogetherId" Type="bigint" Nullable="false" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="Num" Type="int" Nullable="false" />
+          <Property Name="Unit" Type="int" Nullable="false" />
+          <Property Name="BetCent" Type="int" Nullable="false" />
+          <Property Name="PricePer" Type="int" Nullable="false" />
+          <Property Name="PrizeModel" Type="int" Nullable="false" />
+          <Property Name="WinCent" Type="int" />
+          <Property Name="OrderTime" Type="datetime" Nullable="false" />
+          <Property Name="UpdateTime" Type="datetime" />
+          <Property Name="UserCurrentRebate" Type="int" Nullable="false" />
+          <Property Name="PrizeModeFull" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="UserPlayTogetherState">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="Win" Type="int" Nullable="false" />
+          <Property Name="Total" Type="int" Nullable="false" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="WithdrawDeposit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="BankAccountId" Type="int" Nullable="false" />
+          <Property Name="MoneyCent" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+          <Property Name="UserIdProcessedBy" Type="bigint" />
+          <Property Name="ProcessedTime" Type="datetime" />
+          <Property Name="ProcessComment" Type="nvarchar" MaxLength="120" />
+        </EntityType>
+        <EntityType Name="YeepayRecharge">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="bigint" />
+          <Property Name="Money" Type="int" />
+          <Property Name="CreatedTime" Type="datetime" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'bcbz.dbo.YCViewUser' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="YCViewUser">
+          <Key>
+            <PropertyRef Name="AppId" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="ParentUserId" />
+            <PropertyRef Name="NickName" />
+            <PropertyRef Name="UserType" />
+            <PropertyRef Name="Online" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="Rebate" />
+            <PropertyRef Name="UnfixedRebate" />
+            <PropertyRef Name="TotalCent" />
+            <PropertyRef Name="FrozenCent" />
+            <PropertyRef Name="AvailableCent" />
+            <PropertyRef Name="CreatedTime" />
+            <PropertyRef Name="UpdatedTime" />
+            <PropertyRef Name="GroupName" />
+            <PropertyRef Name="GroupId" />
+            <PropertyRef Name="LoginName" />
+            <PropertyRef Name="Rebate11x5" />
+            <PropertyRef Name="Rebate11x5Unfixed" />
+          </Key>
+          <Property Name="AppId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="ParentUserId" Type="bigint" Nullable="false" />
+          <Property Name="NickName" Type="nvarchar" Nullable="false" MaxLength="32" />
+          <Property Name="UserType" Type="int" Nullable="false" />
+          <Property Name="Online" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Rebate" Type="int" Nullable="false" />
+          <Property Name="UnfixedRebate" Type="int" Nullable="false" />
+          <Property Name="TotalCent" Type="int" Nullable="false" />
+          <Property Name="FrozenCent" Type="int" Nullable="false" />
+          <Property Name="AvailableCent" Type="int" Nullable="false" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedTime" Type="datetime" Nullable="false" />
+          <Property Name="LoginTime" Type="datetime" />
+          <Property Name="LoginIp" Type="nvarchar" MaxLength="100" />
+          <Property Name="PenalizeStartTime" Type="datetime" />
+          <Property Name="IntervalDay" Type="int" />
+          <Property Name="BetAmount" Type="decimal" />
+          <Property Name="FanDianChengFaRebate" Type="int" />
+          <Property Name="GroupName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="GroupId" Type="int" Nullable="false" />
+          <Property Name="LoginName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Rebate11x5" Type="int" Nullable="false" />
+          <Property Name="Rebate11x5Unfixed" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_BetOrder_LotteryId">
+          <End Role="Lottery" Type="bcbzModel.Store.Lottery" Multiplicity="1" />
+          <End Role="BetOrder" Type="bcbzModel.Store.BetOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lottery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BetOrder">
+              <PropertyRef Name="LotteryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BetOrder_PlayingMethodId">
+          <End Role="PlayingMethod" Type="bcbzModel.Store.PlayingMethod" Multiplicity="1" />
+          <End Role="BetOrder" Type="bcbzModel.Store.BetOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlayingMethod">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BetOrder">
+              <PropertyRef Name="PlayingMethodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DividendRecord_DividendRecord">
+          <End Role="DividendPercentage" Type="bcbzModel.Store.DividendPercentage" Multiplicity="1" />
+          <End Role="DividendRecord" Type="bcbzModel.Store.DividendRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DividendPercentage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DividendRecord">
+              <PropertyRef Name="PercentageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FollowOrder_OrderId">
+          <End Role="BetOrder" Type="bcbzModel.Store.BetOrder" Multiplicity="1" />
+          <End Role="FollowOrder" Type="bcbzModel.Store.FollowOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BetOrder">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FollowOrder">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InnerLotteryOpenTime_LotteryId">
+          <End Role="Lottery" Type="bcbzModel.Store.Lottery" Multiplicity="1" />
+          <End Role="InnerLotteryOpenTime" Type="bcbzModel.Store.InnerLotteryOpenTime" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lottery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InnerLotteryOpenTime">
+              <PropertyRef Name="LotteryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lottery_CategoryId">
+          <End Role="LotteryCategory" Type="bcbzModel.Store.LotteryCategory" Multiplicity="1" />
+          <End Role="Lottery" Type="bcbzModel.Store.Lottery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LotteryCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lottery">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LotteryOpen_LotteryId">
+          <End Role="Lottery" Type="bcbzModel.Store.Lottery" Multiplicity="1" />
+          <End Role="LotteryOpen" Type="bcbzModel.Store.LotteryOpen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lottery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LotteryOpen">
+              <PropertyRef Name="LotteryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LotteryOpenTime_LotteryId">
+          <End Role="Lottery" Type="bcbzModel.Store.Lottery" Multiplicity="1" />
+          <End Role="LotteryOpenTime" Type="bcbzModel.Store.LotteryOpenTime" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Lottery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LotteryOpenTime">
+              <PropertyRef Name="LotteryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LotteryPlayingMethodPrize_LotteryId">
+          <End Role="Lottery" Type="bcbzModel.Store.Lottery" Multiplicity="1" />
+          <End Role="LotteryPlayingMethodPrize" Type="bcbzModel.Store.LotteryPlayingMethodPrize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lottery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LotteryPlayingMethodPrize">
+              <PropertyRef Name="LotteryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LotteryPlayingMethodPrize_PlayingMethodId">
+          <End Role="PlayingMethod" Type="bcbzModel.Store.PlayingMethod" Multiplicity="1" />
+          <End Role="LotteryPlayingMethodPrize" Type="bcbzModel.Store.LotteryPlayingMethodPrize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlayingMethod">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LotteryPlayingMethodPrize">
+              <PropertyRef Name="PlayingMethodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlayingMethod_CategoryId">
+          <End Role="PlayingCategory" Type="bcbzModel.Store.PlayingCategory" Multiplicity="1" />
+          <End Role="PlayingMethod" Type="bcbzModel.Store.PlayingMethod" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlayingCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PlayingMethod">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlayTogether_BetOrderId">
+          <End Role="BetOrder" Type="bcbzModel.Store.BetOrder" Multiplicity="1" />
+          <End Role="PlayTogether" Type="bcbzModel.Store.PlayTogether" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BetOrder">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PlayTogether">
+              <PropertyRef Name="BetOrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemBankAccount_BankId">
+          <End Role="Bank" Type="bcbzModel.Store.Bank" Multiplicity="1" />
+          <End Role="SystemBankAccount" Type="bcbzModel.Store.SystemBankAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bank">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemBankAccount">
+              <PropertyRef Name="BankId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserBankAccount_BankId">
+          <End Role="Bank" Type="bcbzModel.Store.Bank" Multiplicity="1" />
+          <End Role="UserBankAccount" Type="bcbzModel.Store.UserBankAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bank">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserBankAccount">
+              <PropertyRef Name="BankId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserIncome_BankAccountId">
+          <End Role="UserBankAccount" Type="bcbzModel.Store.UserBankAccount" Multiplicity="0..1" />
+          <End Role="UserIncome" Type="bcbzModel.Store.UserIncome" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserBankAccount">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserIncome">
+              <PropertyRef Name="BankAccountId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserMessage_MessageId">
+          <End Role="Message" Type="bcbzModel.Store.Message" Multiplicity="1" />
+          <End Role="UserMessage" Type="bcbzModel.Store.UserMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserMessage">
+              <PropertyRef Name="MessageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPlayTogetherRecord_PlayTogether">
+          <End Role="PlayTogether" Type="bcbzModel.Store.PlayTogether" Multiplicity="1" />
+          <End Role="UserPlayTogetherRecord" Type="bcbzModel.Store.UserPlayTogetherRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlayTogether">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserPlayTogetherRecord">
+              <PropertyRef Name="PlayTogetherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WithdrawDeposit_BankAccountId">
+          <End Role="UserBankAccount" Type="bcbzModel.Store.UserBankAccount" Multiplicity="1" />
+          <End Role="WithdrawDeposit" Type="bcbzModel.Store.WithdrawDeposit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserBankAccount">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WithdrawDeposit">
+              <PropertyRef Name="BankAccountId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bcbzModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="bcbzEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bank" EntityType="bcbzModel.Bank" />
+          <EntitySet Name="BetOrder" EntityType="bcbzModel.BetOrder" />
+          <EntitySet Name="BZSession" EntityType="bcbzModel.BZSession" />
+          <EntitySet Name="CustomerService" EntityType="bcbzModel.CustomerService" />
+          <EntitySet Name="CustomerServiceCategory" EntityType="bcbzModel.CustomerServiceCategory" />
+          <EntitySet Name="DividendApply" EntityType="bcbzModel.DividendApply" />
+          <EntitySet Name="DividendPercentage" EntityType="bcbzModel.DividendPercentage" />
+          <EntitySet Name="DividendRecord" EntityType="bcbzModel.DividendRecord" />
+          <EntitySet Name="FollowOrder" EntityType="bcbzModel.FollowOrder" />
+          <EntitySet Name="GlobalSetting" EntityType="bcbzModel.GlobalSetting" />
+          <EntitySet Name="History" EntityType="bcbzModel.History" />
+          <EntitySet Name="InnerLotteryOpenTime" EntityType="bcbzModel.InnerLotteryOpenTime" />
+          <EntitySet Name="Lottery" EntityType="bcbzModel.Lottery" />
+          <EntitySet Name="LotteryCategory" EntityType="bcbzModel.LotteryCategory" />
+          <EntitySet Name="LotteryOpen" EntityType="bcbzModel.LotteryOpen" />
+          <EntitySet Name="LotteryOpenTime" EntityType="bcbzModel.LotteryOpenTime" />
+          <EntitySet Name="LotteryPlayingMethodPrize" EntityType="bcbzModel.LotteryPlayingMethodPrize" />
+          <EntitySet Name="Message" EntityType="bcbzModel.Message" />
+          <EntitySet Name="PlatformDividend" EntityType="bcbzModel.PlatformDividend" />
+          <EntitySet Name="PlayingCategory" EntityType="bcbzModel.PlayingCategory" />
+          <EntitySet Name="PlayingMethod" EntityType="bcbzModel.PlayingMethod" />
+          <EntitySet Name="PlayTogether" EntityType="bcbzModel.PlayTogether" />
+          <EntitySet Name="ServerTime" EntityType="bcbzModel.ServerTime" />
+          <EntitySet Name="SystemBankAccount" EntityType="bcbzModel.SystemBankAccount" />
+          <EntitySet Name="SystemPost" EntityType="bcbzModel.SystemPost" />
+          <EntitySet Name="UserAdvice" EntityType="bcbzModel.UserAdvice" />
+          <EntitySet Name="UserBankAccount" EntityType="bcbzModel.UserBankAccount" />
+          <EntitySet Name="UserIncome" EntityType="bcbzModel.UserIncome" />
+          <EntitySet Name="UserMessage" EntityType="bcbzModel.UserMessage" />
+          <EntitySet Name="UserPlayTogetherRecord" EntityType="bcbzModel.UserPlayTogetherRecord" />
+          <EntitySet Name="WithdrawDeposit" EntityType="bcbzModel.WithdrawDeposit" />
+          <EntitySet Name="YCViewUser" EntityType="bcbzModel.YCViewUser" />
+          <AssociationSet Name="FK_SystemBankAccount_BankId" Association="bcbzModel.FK_SystemBankAccount_BankId">
+            <End Role="Bank" EntitySet="Bank" />
+            <End Role="SystemBankAccount" EntitySet="SystemBankAccount" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserBankAccount_BankId" Association="bcbzModel.FK_UserBankAccount_BankId">
+            <End Role="Bank" EntitySet="Bank" />
+            <End Role="UserBankAccount" EntitySet="UserBankAccount" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BetOrder_LotteryId" Association="bcbzModel.FK_BetOrder_LotteryId">
+            <End Role="Lottery" EntitySet="Lottery" />
+            <End Role="BetOrder" EntitySet="BetOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BetOrder_PlayingMethodId" Association="bcbzModel.FK_BetOrder_PlayingMethodId">
+            <End Role="PlayingMethod" EntitySet="PlayingMethod" />
+            <End Role="BetOrder" EntitySet="BetOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FollowOrder_OrderId" Association="bcbzModel.FK_FollowOrder_OrderId">
+            <End Role="BetOrder" EntitySet="BetOrder" />
+            <End Role="FollowOrder" EntitySet="FollowOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlayTogether_BetOrderId" Association="bcbzModel.FK_PlayTogether_BetOrderId">
+            <End Role="BetOrder" EntitySet="BetOrder" />
+            <End Role="PlayTogether" EntitySet="PlayTogether" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DividendRecord_DividendRecord" Association="bcbzModel.FK_DividendRecord_DividendRecord">
+            <End Role="DividendPercentage" EntitySet="DividendPercentage" />
+            <End Role="DividendRecord" EntitySet="DividendRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InnerLotteryOpenTime_LotteryId" Association="bcbzModel.FK_InnerLotteryOpenTime_LotteryId">
+            <End Role="Lottery" EntitySet="Lottery" />
+            <End Role="InnerLotteryOpenTime" EntitySet="InnerLotteryOpenTime" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Lottery_CategoryId" Association="bcbzModel.FK_Lottery_CategoryId">
+            <End Role="LotteryCategory" EntitySet="LotteryCategory" />
+            <End Role="Lottery" EntitySet="Lottery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LotteryOpen_LotteryId" Association="bcbzModel.FK_LotteryOpen_LotteryId">
+            <End Role="Lottery" EntitySet="Lottery" />
+            <End Role="LotteryOpen" EntitySet="LotteryOpen" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LotteryOpenTime_LotteryId" Association="bcbzModel.FK_LotteryOpenTime_LotteryId">
+            <End Role="Lottery" EntitySet="Lottery" />
+            <End Role="LotteryOpenTime" EntitySet="LotteryOpenTime" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LotteryPlayingMethodPrize_LotteryId" Association="bcbzModel.FK_LotteryPlayingMethodPrize_LotteryId">
+            <End Role="Lottery" EntitySet="Lottery" />
+            <End Role="LotteryPlayingMethodPrize" EntitySet="LotteryPlayingMethodPrize" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LotteryPlayingMethodPrize_PlayingMethodId" Association="bcbzModel.FK_LotteryPlayingMethodPrize_PlayingMethodId">
+            <End Role="PlayingMethod" EntitySet="PlayingMethod" />
+            <End Role="LotteryPlayingMethodPrize" EntitySet="LotteryPlayingMethodPrize" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserMessage_MessageId" Association="bcbzModel.FK_UserMessage_MessageId">
+            <End Role="Message" EntitySet="Message" />
+            <End Role="UserMessage" EntitySet="UserMessage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PlayingMethod_CategoryId" Association="bcbzModel.FK_PlayingMethod_CategoryId">
+            <End Role="PlayingCategory" EntitySet="PlayingCategory" />
+            <End Role="PlayingMethod" EntitySet="PlayingMethod" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPlayTogetherRecord_PlayTogether" Association="bcbzModel.FK_UserPlayTogetherRecord_PlayTogether">
+            <End Role="PlayTogether" EntitySet="PlayTogether" />
+            <End Role="UserPlayTogetherRecord" EntitySet="UserPlayTogetherRecord" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserIncome_BankAccountId" Association="bcbzModel.FK_UserIncome_BankAccountId">
+            <End Role="UserBankAccount" EntitySet="UserBankAccount" />
+            <End Role="UserIncome" EntitySet="UserIncome" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WithdrawDeposit_BankAccountId" Association="bcbzModel.FK_WithdrawDeposit_BankAccountId">
+            <End Role="UserBankAccount" EntitySet="UserBankAccount" />
+            <End Role="WithdrawDeposit" EntitySet="WithdrawDeposit" />
+          </AssociationSet>
+          <EntitySet Name="UserPlayTogetherStates" EntityType="bcbzModel.UserPlayTogetherState" />
+          <EntitySet Name="YeepayRecharges" EntityType="bcbzModel.YeepayRecharge" />
+        </EntityContainer>
+        <EntityType Name="Bank">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="URL" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="ICONURL" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SystemBankAccount" Relationship="bcbzModel.FK_SystemBankAccount_BankId" FromRole="Bank" ToRole="SystemBankAccount" />
+          <NavigationProperty Name="UserBankAccount" Relationship="bcbzModel.FK_UserBankAccount_BankId" FromRole="Bank" ToRole="UserBankAccount" />
+        </EntityType>
+        <EntityType Name="BetOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="LotteryId" Type="Int32" Nullable="false" />
+          <Property Name="OpenSequence" Type="Int64" Nullable="false" />
+          <Property Name="PlayingMethodId" Type="Int32" Nullable="false" />
+          <Property Name="BetTimes" Type="Int32" Nullable="false" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="BetCent" Type="Int32" Nullable="false" />
+          <Property Name="WinCent" Type="Int32" Nullable="false" />
+          <Property Name="Rebate" Type="Int32" Nullable="false" />
+          <Property Name="BetMode" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="WinFlag" Type="Int32" />
+          <Property Name="OrderTime" Type="DateTime" Nullable="false" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="UpdateUserId" Type="Int64" />
+          <Property Name="UserCurrentRebate" Type="Int32" Nullable="false" />
+          <Property Name="PrizeModeFull" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Lottery" Relationship="bcbzModel.FK_BetOrder_LotteryId" FromRole="BetOrder" ToRole="Lottery" />
+          <NavigationProperty Name="PlayingMethod" Relationship="bcbzModel.FK_BetOrder_PlayingMethodId" FromRole="BetOrder" ToRole="PlayingMethod" />
+          <NavigationProperty Name="FollowOrder" Relationship="bcbzModel.FK_FollowOrder_OrderId" FromRole="BetOrder" ToRole="FollowOrder" />
+          <NavigationProperty Name="PlayTogether" Relationship="bcbzModel.FK_PlayTogether_BetOrderId" FromRole="BetOrder" ToRole="PlayTogether" />
+        </EntityType>
+        <EntityType Name="BZSession">
+          <Key>
+            <PropertyRef Name="SessionKey" />
+          </Key>
+          <Property Name="SessionKey" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="AvailableFuncIds" Type="String" MaxLength="1024" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="CustomerService">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="UserIdAnsweredBy" Type="Int64" Nullable="false" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="CustomerServiceCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreatedTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="DividendApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="StartTime" Type="DateTime" Nullable="false" />
+          <Property Name="EndTime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DividendPercentage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="LossAmount" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="Percentage" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+          <Property Name="CreateTime" Type="DateTime" Nullable="false" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DividendRecord" Relationship="bcbzModel.FK_DividendRecord_DividendRecord" FromRole="DividendPercentage" ToRole="DividendRecord" />
+        </EntityType>
+        <EntityType Name="DividendRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="StartTime" Type="DateTime" Nullable="false" />
+          <Property Name="EndTime" Type="DateTime" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="ApplyId" Type="Int64" Nullable="false" />
+          <Property Name="PercentageId" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="DividendPercentage" Relationship="bcbzModel.FK_DividendRecord_DividendRecord" FromRole="DividendRecord" ToRole="DividendPercentage" />
+        </EntityType>
+        <EntityType Name="FollowOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="OrderId" Type="Int64" Nullable="false" />
+          <Property Name="FollowSequences" Type="String" Nullable="false" MaxLength="3000" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="StopOnShot" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="BetOrder" Relationship="bcbzModel.FK_FollowOrder_OrderId" FromRole="FollowOrder" ToRole="BetOrder" />
+        </EntityType>
+        <EntityType Name="GlobalSetting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="ValueType" Type="Int32" Nullable="false" />
+          <Property Name="Value" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="History">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="CreatedTime" Type="DateTime" />
+          <Property Name="FunctionName" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="Content" Type="String" MaxLength="1200" Unicode="true" FixedLength="false" />
+          <Property Name="Content2" Type="String" MaxLength="1200" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="InnerLotteryOpenTime">
+          <Key>
+            <PropertyRef Name="LotteryId" />
+            <PropertyRef Name="OpenSequence" />
+          </Key>
+          <Property Name="LotteryId" Type="Int32" Nullable="false" />
+          <Property Name="OpenSequence" Type="Int64" Nullable="false" />
+          <Property Name="OpenHour" Type="Int32" Nullable="false" />
+          <Property Name="OpenMinute" Type="Int32" Nullable="false" />
+          <Property Name="DaysAddSequence" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lottery" Relationship="bcbzModel.FK_InnerLotteryOpenTime_LotteryId" FromRole="InnerLotteryOpenTime" ToRole="Lottery" />
+        </EntityType>
+        <EntityType Name="Lottery">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="OpenMode" Type="Int32" Nullable="false" />
+          <Property Name="OpenNumberCount" Type="Int32" Nullable="false" />
+          <Property Name="StartNumber" Type="Int32" Nullable="false" />
+          <Property Name="EndNumber" Type="Int32" Nullable="false" />
+          <Property Name="MaxSequence" Type="Int32" Nullable="false" />
+          <Property Name="NextOpenSequence" Type="Int64" Nullable="false" />
+          <Property Name="PrizeMoney" Type="Int32" Nullable="false" />
+          <Property Name="OpenDelaySeconds" Type="Int32" Nullable="false" />
+          <Property Name="MaxPrize" Type="Int32" Nullable="false" />
+          <Property Name="MaxPrizeRebate" Type="Int32" Nullable="false" />
+          <Property Name="MinPrize" Type="Int32" Nullable="false" />
+          <Property Name="MinPrizeRebate" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BetOrder" Relationship="bcbzModel.FK_BetOrder_LotteryId" FromRole="Lottery" ToRole="BetOrder" />
+          <NavigationProperty Name="InnerLotteryOpenTime" Relationship="bcbzModel.FK_InnerLotteryOpenTime_LotteryId" FromRole="Lottery" ToRole="InnerLotteryOpenTime" />
+          <NavigationProperty Name="LotteryCategory" Relationship="bcbzModel.FK_Lottery_CategoryId" FromRole="Lottery" ToRole="LotteryCategory" />
+          <NavigationProperty Name="LotteryOpen" Relationship="bcbzModel.FK_LotteryOpen_LotteryId" FromRole="Lottery" ToRole="LotteryOpen" />
+          <NavigationProperty Name="LotteryOpenTime" Relationship="bcbzModel.FK_LotteryOpenTime_LotteryId" FromRole="Lottery" ToRole="LotteryOpenTime" />
+          <NavigationProperty Name="LotteryPlayingMethodPrize" Relationship="bcbzModel.FK_LotteryPlayingMethodPrize_LotteryId" FromRole="Lottery" ToRole="LotteryPlayingMethodPrize" />
+        </EntityType>
+        <EntityType Name="LotteryCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lottery" Relationship="bcbzModel.FK_Lottery_CategoryId" FromRole="LotteryCategory" ToRole="Lottery" />
+        </EntityType>
+        <EntityType Name="LotteryOpen">
+          <Key>
+            <PropertyRef Name="LotteryId" />
+            <PropertyRef Name="OpenningSequence" />
+          </Key>
+          <Property Name="LotteryId" Type="Int32" Nullable="false" />
+          <Property Name="OpenningSequence" Type="Int64" Nullable="false" />
+          <Property Name="OpenMode" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="OpenningNumbers" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedTime" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Lottery" Relationship="bcbzModel.FK_LotteryOpen_LotteryId" FromRole="LotteryOpen" ToRole="Lottery" />
+        </EntityType>
+        <EntityType Name="LotteryOpenTime">
+          <Key>
+            <PropertyRef Name="LotteryId" />
+          </Key>
+          <Property Name="LotteryId" Type="Int32" Nullable="false" />
+          <Property Name="OpenSequence" Type="Int64" Nullable="false" />
+          <Property Name="OpenTime" Type="DateTime" Nullable="false" />
+          <Property Name="OpenNumbers" Type="String" MaxLength="5" Unicode="true" FixedLength="true" />
+          <Property Name="OpenningSequence" Type="Int64" Nullable="false" />
+          <Property Name="OpenningTime" Type="DateTime" Nullable="false" />
+          <Property Name="SaleSequence" Type="Int64" Nullable="false" />
+          <Property Name="SaleEndTime" Type="DateTime" Nullable="false" />
+          <Property Name="OpenDelaySeconds" Type="Int32" Nullable="false" />
+          <Property Name="FrozenSeconds" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lottery" Relationship="bcbzModel.FK_LotteryOpenTime_LotteryId" FromRole="LotteryOpenTime" ToRole="Lottery" />
+        </EntityType>
+        <EntityType Name="LotteryPlayingMethodPrize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LotteryId" Type="Int32" Nullable="false" />
+          <Property Name="PlayingMethodId" Type="Int32" Nullable="false" />
+          <Property Name="PrizeMoney" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Lottery" Relationship="bcbzModel.FK_LotteryPlayingMethodPrize_LotteryId" FromRole="LotteryPlayingMethodPrize" ToRole="Lottery" />
+          <NavigationProperty Name="PlayingMethod" Relationship="bcbzModel.FK_LotteryPlayingMethodPrize_PlayingMethodId" FromRole="LotteryPlayingMethodPrize" ToRole="PlayingMethod" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SenderId" Type="Int64" Nullable="false" />
+          <Property Name="CreatedTime" Type="DateTime" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Content" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Category" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="UserMessage" Relationship="bcbzModel.FK_UserMessage_MessageId" FromRole="Message" ToRole="UserMessage" />
+        </EntityType>
+        <EntityType Name="PlatformDividend">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="Month" />
+          </Key>
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="Month" Type="Int32" Nullable="false" />
+          <Property Name="ProfitCent" Type="Int32" />
+          <Property Name="ReturnCentFromLower" Type="Int32" />
+          <Property Name="LowerProfitCent" Type="Int32" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="StatusTime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlayingCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" />
+          <NavigationProperty Name="PlayingMethod" Relationship="bcbzModel.FK_PlayingMethod_CategoryId" FromRole="PlayingCategory" ToRole="PlayingMethod" />
+        </EntityType>
+        <EntityType Name="PlayingMethod">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="ShortName" Type="String" Nullable="false" MaxLength="16" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="PrizeMoney" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BetOrder" Relationship="bcbzModel.FK_BetOrder_PlayingMethodId" FromRole="PlayingMethod" ToRole="BetOrder" />
+          <NavigationProperty Name="LotteryPlayingMethodPrize" Relationship="bcbzModel.FK_LotteryPlayingMethodPrize_PlayingMethodId" FromRole="PlayingMethod" ToRole="LotteryPlayingMethodPrize" />
+          <NavigationProperty Name="PlayingCategory" Relationship="bcbzModel.FK_PlayingMethod_CategoryId" FromRole="PlayingMethod" ToRole="PlayingCategory" />
+        </EntityType>
+        <EntityType Name="PlayTogether">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BetOrderId" Type="Int64" Nullable="false" />
+          <Property Name="Publiced" Type="Boolean" Nullable="false" />
+          <Property Name="Rebate" Type="Int32" Nullable="false" />
+          <Property Name="WinCent" Type="Int32" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="WinPercent" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="OrderTime" Type="DateTime" Nullable="false" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <NavigationProperty Name="BetOrder" Relationship="bcbzModel.FK_PlayTogether_BetOrderId" FromRole="PlayTogether" ToRole="BetOrder" />
+          <NavigationProperty Name="UserPlayTogetherRecord" Relationship="bcbzModel.FK_UserPlayTogetherRecord_PlayTogether" FromRole="PlayTogether" ToRole="UserPlayTogetherRecord" />
+        </EntityType>
+        <EntityType Name="ServerTime">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LotteryServerTime" Type="DateTime" Nullable="false" />
+          <Property Name="LocalTime" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SystemBankAccount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BankId" Type="Int32" Nullable="false" />
+          <Property Name="AccountNo" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="AccountName" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedTime" Type="DateTime" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Bank" Relationship="bcbzModel.FK_SystemBankAccount_BankId" FromRole="SystemBankAccount" ToRole="Bank" />
+        </EntityType>
+        <EntityType Name="SystemPost">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="CreatedTime" Type="DateTime" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserAdvice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedTime" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="UserBankAccount">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="BankId" Type="Int32" Nullable="false" />
+          <Property Name="AccountNo" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="AccountName" Type="String" Nullable="false" MaxLength="120" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreatedTime" Type="DateTime" Nullable="false" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <NavigationProperty Name="Bank" Relationship="bcbzModel.FK_UserBankAccount_BankId" FromRole="UserBankAccount" ToRole="Bank" />
+          <NavigationProperty Name="UserIncome" Relationship="bcbzModel.FK_UserIncome_BankAccountId" FromRole="UserBankAccount" ToRole="UserIncome" />
+          <NavigationProperty Name="WithdrawDeposit" Relationship="bcbzModel.FK_WithdrawDeposit_BankAccountId" FromRole="UserBankAccount" ToRole="WithdrawDeposit" />
+          <Property Type="String" Name="Branch" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserIncome">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="IncomeType" Type="Int32" Nullable="false" />
+          <Property Name="FromId" Type="Int64" />
+          <Property Name="IncomeCent" Type="Int32" Nullable="false" />
+          <Property Name="BankAccountId" Type="Int32" />
+          <Property Name="CreatedTime" Type="DateTime" Nullable="false" />
+          <Property Name="BankOprNo" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CurrentAvailableCent" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="OrderId" Type="Int64" />
+          <NavigationProperty Name="UserBankAccount" Relationship="bcbzModel.FK_UserIncome_BankAccountId" FromRole="UserIncome" ToRole="UserBankAccount" />
+          <Property Type="String" Name="Source" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserMessage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="MessageId" Type="Int64" Nullable="false" />
+          <Property Name="CreatedTime" Type="DateTime" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Message" Relationship="bcbzModel.FK_UserMessage_MessageId" FromRole="UserMessage" ToRole="Message" />
+        </EntityType>
+        <EntityType Name="UserPlayTogetherRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlayTogetherId" Type="Int64" Nullable="false" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="Num" Type="Int32" Nullable="false" />
+          <Property Name="Unit" Type="Int32" Nullable="false" />
+          <Property Name="BetCent" Type="Int32" Nullable="false" />
+          <Property Name="PricePer" Type="Int32" Nullable="false" />
+          <Property Name="PrizeModel" Type="Int32" Nullable="false" />
+          <Property Name="WinCent" Type="Int32" />
+          <Property Name="OrderTime" Type="DateTime" Nullable="false" />
+          <Property Name="UpdateTime" Type="DateTime" />
+          <Property Name="UserCurrentRebate" Type="Int32" Nullable="false" />
+          <Property Name="PrizeModeFull" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="PlayTogether" Relationship="bcbzModel.FK_UserPlayTogetherRecord_PlayTogether" FromRole="UserPlayTogetherRecord" ToRole="PlayTogether" />
+        </EntityType>
+        <EntityType Name="WithdrawDeposit">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BankAccountId" Type="Int32" Nullable="false" />
+          <Property Name="MoneyCent" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="CreatedTime" Type="DateTime" Nullable="false" />
+          <Property Name="UserIdProcessedBy" Type="Int64" />
+          <Property Name="ProcessedTime" Type="DateTime" />
+          <Property Name="ProcessComment" Type="String" MaxLength="120" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="UserBankAccount" Relationship="bcbzModel.FK_WithdrawDeposit_BankAccountId" FromRole="WithdrawDeposit" ToRole="UserBankAccount" />
+        </EntityType>
+        <EntityType Name="YCViewUser">
+          <Key>
+            <PropertyRef Name="AppId" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="ParentUserId" />
+            <PropertyRef Name="NickName" />
+            <PropertyRef Name="UserType" />
+            <PropertyRef Name="Online" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="Rebate" />
+            <PropertyRef Name="UnfixedRebate" />
+            <PropertyRef Name="TotalCent" />
+            <PropertyRef Name="FrozenCent" />
+            <PropertyRef Name="AvailableCent" />
+            <PropertyRef Name="CreatedTime" />
+            <PropertyRef Name="UpdatedTime" />
+            <PropertyRef Name="GroupName" />
+            <PropertyRef Name="GroupId" />
+            <PropertyRef Name="LoginName" />
+            <PropertyRef Name="Rebate11x5" />
+            <PropertyRef Name="Rebate11x5Unfixed" />
+          </Key>
+          <Property Name="AppId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="ParentUserId" Type="Int64" Nullable="false" />
+          <Property Name="NickName" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="UserType" Type="Int32" Nullable="false" />
+          <Property Name="Online" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Rebate" Type="Int32" Nullable="false" />
+          <Property Name="UnfixedRebate" Type="Int32" Nullable="false" />
+          <Property Name="TotalCent" Type="Int32" Nullable="false" />
+          <Property Name="FrozenCent" Type="Int32" Nullable="false" />
+          <Property Name="AvailableCent" Type="Int32" Nullable="false" />
+          <Property Name="CreatedTime" Type="DateTime" Nullable="false" />
+          <Property Name="UpdatedTime" Type="DateTime" Nullable="false" />
+          <Property Name="LoginTime" Type="DateTime" />
+          <Property Name="LoginIp" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="PenalizeStartTime" Type="DateTime" />
+          <Property Name="IntervalDay" Type="Int32" />
+          <Property Name="BetAmount" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FanDianChengFaRebate" Type="Int32" />
+          <Property Name="GroupName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GroupId" Type="Int32" Nullable="false" />
+          <Property Name="LoginName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Rebate11x5" Type="Int32" Nullable="false" />
+          <Property Name="Rebate11x5Unfixed" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_SystemBankAccount_BankId">
+          <End Role="Bank" Type="bcbzModel.Bank" Multiplicity="1" />
+          <End Role="SystemBankAccount" Type="bcbzModel.SystemBankAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bank">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemBankAccount">
+              <PropertyRef Name="BankId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserBankAccount_BankId">
+          <End Role="Bank" Type="bcbzModel.Bank" Multiplicity="1" />
+          <End Role="UserBankAccount" Type="bcbzModel.UserBankAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Bank">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserBankAccount">
+              <PropertyRef Name="BankId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BetOrder_LotteryId">
+          <End Role="Lottery" Type="bcbzModel.Lottery" Multiplicity="1" />
+          <End Role="BetOrder" Type="bcbzModel.BetOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lottery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BetOrder">
+              <PropertyRef Name="LotteryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BetOrder_PlayingMethodId">
+          <End Role="PlayingMethod" Type="bcbzModel.PlayingMethod" Multiplicity="1" />
+          <End Role="BetOrder" Type="bcbzModel.BetOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlayingMethod">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BetOrder">
+              <PropertyRef Name="PlayingMethodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FollowOrder_OrderId">
+          <End Role="BetOrder" Type="bcbzModel.BetOrder" Multiplicity="1" />
+          <End Role="FollowOrder" Type="bcbzModel.FollowOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BetOrder">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FollowOrder">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlayTogether_BetOrderId">
+          <End Role="BetOrder" Type="bcbzModel.BetOrder" Multiplicity="1" />
+          <End Role="PlayTogether" Type="bcbzModel.PlayTogether" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BetOrder">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PlayTogether">
+              <PropertyRef Name="BetOrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DividendRecord_DividendRecord">
+          <End Role="DividendPercentage" Type="bcbzModel.DividendPercentage" Multiplicity="1" />
+          <End Role="DividendRecord" Type="bcbzModel.DividendRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DividendPercentage">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DividendRecord">
+              <PropertyRef Name="PercentageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InnerLotteryOpenTime_LotteryId">
+          <End Role="Lottery" Type="bcbzModel.Lottery" Multiplicity="1" />
+          <End Role="InnerLotteryOpenTime" Type="bcbzModel.InnerLotteryOpenTime" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lottery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InnerLotteryOpenTime">
+              <PropertyRef Name="LotteryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Lottery_CategoryId">
+          <End Role="LotteryCategory" Type="bcbzModel.LotteryCategory" Multiplicity="1" />
+          <End Role="Lottery" Type="bcbzModel.Lottery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LotteryCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Lottery">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LotteryOpen_LotteryId">
+          <End Role="Lottery" Type="bcbzModel.Lottery" Multiplicity="1" />
+          <End Role="LotteryOpen" Type="bcbzModel.LotteryOpen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lottery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LotteryOpen">
+              <PropertyRef Name="LotteryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LotteryOpenTime_LotteryId">
+          <End Role="Lottery" Type="bcbzModel.Lottery" Multiplicity="1" />
+          <End Role="LotteryOpenTime" Type="bcbzModel.LotteryOpenTime" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Lottery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LotteryOpenTime">
+              <PropertyRef Name="LotteryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LotteryPlayingMethodPrize_LotteryId">
+          <End Role="Lottery" Type="bcbzModel.Lottery" Multiplicity="1" />
+          <End Role="LotteryPlayingMethodPrize" Type="bcbzModel.LotteryPlayingMethodPrize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lottery">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LotteryPlayingMethodPrize">
+              <PropertyRef Name="LotteryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LotteryPlayingMethodPrize_PlayingMethodId">
+          <End Role="PlayingMethod" Type="bcbzModel.PlayingMethod" Multiplicity="1" />
+          <End Role="LotteryPlayingMethodPrize" Type="bcbzModel.LotteryPlayingMethodPrize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlayingMethod">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LotteryPlayingMethodPrize">
+              <PropertyRef Name="PlayingMethodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserMessage_MessageId">
+          <End Role="Message" Type="bcbzModel.Message" Multiplicity="1" />
+          <End Role="UserMessage" Type="bcbzModel.UserMessage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Message">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserMessage">
+              <PropertyRef Name="MessageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PlayingMethod_CategoryId">
+          <End Role="PlayingCategory" Type="bcbzModel.PlayingCategory" Multiplicity="1" />
+          <End Role="PlayingMethod" Type="bcbzModel.PlayingMethod" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlayingCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PlayingMethod">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPlayTogetherRecord_PlayTogether">
+          <End Role="PlayTogether" Type="bcbzModel.PlayTogether" Multiplicity="1" />
+          <End Role="UserPlayTogetherRecord" Type="bcbzModel.UserPlayTogetherRecord" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PlayTogether">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserPlayTogetherRecord">
+              <PropertyRef Name="PlayTogetherId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserIncome_BankAccountId">
+          <End Role="UserBankAccount" Type="bcbzModel.UserBankAccount" Multiplicity="0..1" />
+          <End Role="UserIncome" Type="bcbzModel.UserIncome" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserBankAccount">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserIncome">
+              <PropertyRef Name="BankAccountId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WithdrawDeposit_BankAccountId">
+          <End Role="UserBankAccount" Type="bcbzModel.UserBankAccount" Multiplicity="1" />
+          <End Role="WithdrawDeposit" Type="bcbzModel.WithdrawDeposit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserBankAccount">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WithdrawDeposit">
+              <PropertyRef Name="BankAccountId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="UserPlayTogetherState">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="Win" Nullable="false" />
+          <Property Type="Int32" Name="Total" Nullable="false" />
+          <Property Type="DateTime" Name="CreatedTime" Nullable="false" />
+          <Property Type="DateTime" Name="UpdatedTime" />
+        </EntityType>
+        <EntityType Name="YeepayRecharge">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Type="Guid" Name="OrderId" Nullable="false" />
+          <Property Type="Int64" Name="UserId" />
+          <Property Type="Int32" Name="Money" />
+          <Property Type="DateTime" Name="CreatedTime" />
+          <Property Type="Int32" Name="Status" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bcbzModelStoreContainer" CdmEntityContainer="bcbzEntities">
+          <EntitySetMapping Name="Bank">
+            <EntityTypeMapping TypeName="bcbzModel.Bank">
+              <MappingFragment StoreEntitySet="Bank">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ICONURL" ColumnName="ICONURL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BetOrder">
+            <EntityTypeMapping TypeName="bcbzModel.BetOrder">
+              <MappingFragment StoreEntitySet="BetOrder">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="LotteryId" ColumnName="LotteryId" />
+                <ScalarProperty Name="OpenSequence" ColumnName="OpenSequence" />
+                <ScalarProperty Name="PlayingMethodId" ColumnName="PlayingMethodId" />
+                <ScalarProperty Name="BetTimes" ColumnName="BetTimes" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="BetCent" ColumnName="BetCent" />
+                <ScalarProperty Name="WinCent" ColumnName="WinCent" />
+                <ScalarProperty Name="Rebate" ColumnName="Rebate" />
+                <ScalarProperty Name="BetMode" ColumnName="BetMode" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="WinFlag" ColumnName="WinFlag" />
+                <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UpdateUserId" ColumnName="UpdateUserId" />
+                <ScalarProperty Name="UserCurrentRebate" ColumnName="UserCurrentRebate" />
+                <ScalarProperty Name="PrizeModeFull" ColumnName="PrizeModeFull" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BZSession">
+            <EntityTypeMapping TypeName="bcbzModel.BZSession">
+              <MappingFragment StoreEntitySet="BZSession">
+                <ScalarProperty Name="SessionKey" ColumnName="SessionKey" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="AvailableFuncIds" ColumnName="AvailableFuncIds" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerService">
+            <EntityTypeMapping TypeName="bcbzModel.CustomerService">
+              <MappingFragment StoreEntitySet="CustomerService">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserIdAnsweredBy" ColumnName="UserIdAnsweredBy" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerServiceCategory">
+            <EntityTypeMapping TypeName="bcbzModel.CustomerServiceCategory">
+              <MappingFragment StoreEntitySet="CustomerServiceCategory">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DividendApply">
+            <EntityTypeMapping TypeName="bcbzModel.DividendApply">
+              <MappingFragment StoreEntitySet="DividendApply">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DividendPercentage">
+            <EntityTypeMapping TypeName="bcbzModel.DividendPercentage">
+              <MappingFragment StoreEntitySet="DividendPercentage">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="LossAmount" ColumnName="LossAmount" />
+                <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DividendRecord">
+            <EntityTypeMapping TypeName="bcbzModel.DividendRecord">
+              <MappingFragment StoreEntitySet="DividendRecord">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="ApplyId" ColumnName="ApplyId" />
+                <ScalarProperty Name="PercentageId" ColumnName="PercentageId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FollowOrder">
+            <EntityTypeMapping TypeName="bcbzModel.FollowOrder">
+              <MappingFragment StoreEntitySet="FollowOrder">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="FollowSequences" ColumnName="FollowSequences" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StopOnShot" ColumnName="StopOnShot" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GlobalSetting">
+            <EntityTypeMapping TypeName="bcbzModel.GlobalSetting">
+              <MappingFragment StoreEntitySet="GlobalSetting">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ValueType" ColumnName="ValueType" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="History">
+            <EntityTypeMapping TypeName="bcbzModel.History">
+              <MappingFragment StoreEntitySet="History">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="FunctionName" ColumnName="FunctionName" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Content2" ColumnName="Content2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InnerLotteryOpenTime">
+            <EntityTypeMapping TypeName="bcbzModel.InnerLotteryOpenTime">
+              <MappingFragment StoreEntitySet="InnerLotteryOpenTime">
+                <ScalarProperty Name="LotteryId" ColumnName="LotteryId" />
+                <ScalarProperty Name="OpenSequence" ColumnName="OpenSequence" />
+                <ScalarProperty Name="OpenHour" ColumnName="OpenHour" />
+                <ScalarProperty Name="OpenMinute" ColumnName="OpenMinute" />
+                <ScalarProperty Name="DaysAddSequence" ColumnName="DaysAddSequence" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Lottery">
+            <EntityTypeMapping TypeName="bcbzModel.Lottery">
+              <MappingFragment StoreEntitySet="Lottery">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="OpenMode" ColumnName="OpenMode" />
+                <ScalarProperty Name="OpenNumberCount" ColumnName="OpenNumberCount" />
+                <ScalarProperty Name="StartNumber" ColumnName="StartNumber" />
+                <ScalarProperty Name="EndNumber" ColumnName="EndNumber" />
+                <ScalarProperty Name="MaxSequence" ColumnName="MaxSequence" />
+                <ScalarProperty Name="NextOpenSequence" ColumnName="NextOpenSequence" />
+                <ScalarProperty Name="PrizeMoney" ColumnName="PrizeMoney" />
+                <ScalarProperty Name="OpenDelaySeconds" ColumnName="OpenDelaySeconds" />
+                <ScalarProperty Name="MaxPrize" ColumnName="MaxPrize" />
+                <ScalarProperty Name="MaxPrizeRebate" ColumnName="MaxPrizeRebate" />
+                <ScalarProperty Name="MinPrize" ColumnName="MinPrize" />
+                <ScalarProperty Name="MinPrizeRebate" ColumnName="MinPrizeRebate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LotteryCategory">
+            <EntityTypeMapping TypeName="bcbzModel.LotteryCategory">
+              <MappingFragment StoreEntitySet="LotteryCategory">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LotteryOpen">
+            <EntityTypeMapping TypeName="bcbzModel.LotteryOpen">
+              <MappingFragment StoreEntitySet="LotteryOpen">
+                <ScalarProperty Name="LotteryId" ColumnName="LotteryId" />
+                <ScalarProperty Name="OpenningSequence" ColumnName="OpenningSequence" />
+                <ScalarProperty Name="OpenMode" ColumnName="OpenMode" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="OpenningNumbers" ColumnName="OpenningNumbers" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LotteryOpenTime">
+            <EntityTypeMapping TypeName="bcbzModel.LotteryOpenTime">
+              <MappingFragment StoreEntitySet="LotteryOpenTime">
+                <ScalarProperty Name="LotteryId" ColumnName="LotteryId" />
+                <ScalarProperty Name="OpenSequence" ColumnName="OpenSequence" />
+                <ScalarProperty Name="OpenTime" ColumnName="OpenTime" />
+                <ScalarProperty Name="OpenNumbers" ColumnName="OpenNumbers" />
+                <ScalarProperty Name="OpenningSequence" ColumnName="OpenningSequence" />
+                <ScalarProperty Name="OpenningTime" ColumnName="OpenningTime" />
+                <ScalarProperty Name="SaleSequence" ColumnName="SaleSequence" />
+                <ScalarProperty Name="SaleEndTime" ColumnName="SaleEndTime" />
+                <ScalarProperty Name="OpenDelaySeconds" ColumnName="OpenDelaySeconds" />
+                <ScalarProperty Name="FrozenSeconds" ColumnName="FrozenSeconds" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LotteryPlayingMethodPrize">
+            <EntityTypeMapping TypeName="bcbzModel.LotteryPlayingMethodPrize">
+              <MappingFragment StoreEntitySet="LotteryPlayingMethodPrize">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LotteryId" ColumnName="LotteryId" />
+                <ScalarProperty Name="PlayingMethodId" ColumnName="PlayingMethodId" />
+                <ScalarProperty Name="PrizeMoney" ColumnName="PrizeMoney" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Message">
+            <EntityTypeMapping TypeName="bcbzModel.Message">
+              <MappingFragment StoreEntitySet="Message">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SenderId" ColumnName="SenderId" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlatformDividend">
+            <EntityTypeMapping TypeName="bcbzModel.PlatformDividend">
+              <MappingFragment StoreEntitySet="PlatformDividend">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Month" ColumnName="Month" />
+                <ScalarProperty Name="ProfitCent" ColumnName="ProfitCent" />
+                <ScalarProperty Name="ReturnCentFromLower" ColumnName="ReturnCentFromLower" />
+                <ScalarProperty Name="LowerProfitCent" ColumnName="LowerProfitCent" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StatusTime" ColumnName="StatusTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlayingCategory">
+            <EntityTypeMapping TypeName="bcbzModel.PlayingCategory">
+              <MappingFragment StoreEntitySet="PlayingCategory">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlayingMethod">
+            <EntityTypeMapping TypeName="bcbzModel.PlayingMethod">
+              <MappingFragment StoreEntitySet="PlayingMethod">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PrizeMoney" ColumnName="PrizeMoney" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlayTogether">
+            <EntityTypeMapping TypeName="bcbzModel.PlayTogether">
+              <MappingFragment StoreEntitySet="PlayTogether">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BetOrderId" ColumnName="BetOrderId" />
+                <ScalarProperty Name="Publiced" ColumnName="Publiced" />
+                <ScalarProperty Name="Rebate" ColumnName="Rebate" />
+                <ScalarProperty Name="WinCent" ColumnName="WinCent" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="WinPercent" ColumnName="WinPercent" />
+                <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServerTime">
+            <EntityTypeMapping TypeName="bcbzModel.ServerTime">
+              <MappingFragment StoreEntitySet="ServerTime">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="LotteryServerTime" ColumnName="LotteryServerTime" />
+                <ScalarProperty Name="LocalTime" ColumnName="LocalTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemBankAccount">
+            <EntityTypeMapping TypeName="bcbzModel.SystemBankAccount">
+              <MappingFragment StoreEntitySet="SystemBankAccount">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BankId" ColumnName="BankId" />
+                <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemPost">
+            <EntityTypeMapping TypeName="bcbzModel.SystemPost">
+              <MappingFragment StoreEntitySet="SystemPost">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserAdvice">
+            <EntityTypeMapping TypeName="bcbzModel.UserAdvice">
+              <MappingFragment StoreEntitySet="UserAdvice">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserBankAccount">
+            <EntityTypeMapping TypeName="bcbzModel.UserBankAccount">
+              <MappingFragment StoreEntitySet="UserBankAccount">
+                <ScalarProperty Name="Branch" ColumnName="Branch" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="BankId" ColumnName="BankId" />
+                <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserIncome">
+            <EntityTypeMapping TypeName="bcbzModel.UserIncome">
+              <MappingFragment StoreEntitySet="UserIncome">
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="IncomeType" ColumnName="IncomeType" />
+                <ScalarProperty Name="FromId" ColumnName="FromId" />
+                <ScalarProperty Name="IncomeCent" ColumnName="IncomeCent" />
+                <ScalarProperty Name="BankAccountId" ColumnName="BankAccountId" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="BankOprNo" ColumnName="BankOprNo" />
+                <ScalarProperty Name="CurrentAvailableCent" ColumnName="CurrentAvailableCent" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserMessage">
+            <EntityTypeMapping TypeName="bcbzModel.UserMessage">
+              <MappingFragment StoreEntitySet="UserMessage">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserPlayTogetherRecord">
+            <EntityTypeMapping TypeName="bcbzModel.UserPlayTogetherRecord">
+              <MappingFragment StoreEntitySet="UserPlayTogetherRecord">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PlayTogetherId" ColumnName="PlayTogetherId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Num" ColumnName="Num" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="BetCent" ColumnName="BetCent" />
+                <ScalarProperty Name="PricePer" ColumnName="PricePer" />
+                <ScalarProperty Name="PrizeModel" ColumnName="PrizeModel" />
+                <ScalarProperty Name="WinCent" ColumnName="WinCent" />
+                <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+                <ScalarProperty Name="UserCurrentRebate" ColumnName="UserCurrentRebate" />
+                <ScalarProperty Name="PrizeModeFull" ColumnName="PrizeModeFull" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WithdrawDeposit">
+            <EntityTypeMapping TypeName="bcbzModel.WithdrawDeposit">
+              <MappingFragment StoreEntitySet="WithdrawDeposit">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="BankAccountId" ColumnName="BankAccountId" />
+                <ScalarProperty Name="MoneyCent" ColumnName="MoneyCent" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="UserIdProcessedBy" ColumnName="UserIdProcessedBy" />
+                <ScalarProperty Name="ProcessedTime" ColumnName="ProcessedTime" />
+                <ScalarProperty Name="ProcessComment" ColumnName="ProcessComment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YCViewUser">
+            <EntityTypeMapping TypeName="bcbzModel.YCViewUser">
+              <MappingFragment StoreEntitySet="YCViewUser">
+                <ScalarProperty Name="AppId" ColumnName="AppId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ParentUserId" ColumnName="ParentUserId" />
+                <ScalarProperty Name="NickName" ColumnName="NickName" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="Online" ColumnName="Online" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Rebate" ColumnName="Rebate" />
+                <ScalarProperty Name="UnfixedRebate" ColumnName="UnfixedRebate" />
+                <ScalarProperty Name="TotalCent" ColumnName="TotalCent" />
+                <ScalarProperty Name="FrozenCent" ColumnName="FrozenCent" />
+                <ScalarProperty Name="AvailableCent" ColumnName="AvailableCent" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="UpdatedTime" ColumnName="UpdatedTime" />
+                <ScalarProperty Name="LoginTime" ColumnName="LoginTime" />
+                <ScalarProperty Name="LoginIp" ColumnName="LoginIp" />
+                <ScalarProperty Name="PenalizeStartTime" ColumnName="PenalizeStartTime" />
+                <ScalarProperty Name="IntervalDay" ColumnName="IntervalDay" />
+                <ScalarProperty Name="BetAmount" ColumnName="BetAmount" />
+                <ScalarProperty Name="FanDianChengFaRebate" ColumnName="FanDianChengFaRebate" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="Rebate11x5" ColumnName="Rebate11x5" />
+                <ScalarProperty Name="Rebate11x5Unfixed" ColumnName="Rebate11x5Unfixed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserPlayTogetherStates">
+            <EntityTypeMapping TypeName="bcbzModel.UserPlayTogetherState">
+              <MappingFragment StoreEntitySet="UserPlayTogetherState">
+                <ScalarProperty Name="UpdatedTime" ColumnName="UpdatedTime" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Win" ColumnName="Win" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YeepayRecharges">
+            <EntityTypeMapping TypeName="bcbzModel.YeepayRecharge">
+              <MappingFragment StoreEntitySet="YeepayRecharge">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="bcbzModel.Bank" Width="1.5" PointX="10.75" PointY="5" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.BetOrder" Width="1.5" PointX="5.25" PointY="8.125" Height="5.2494108072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.BZSession" Width="1.5" PointX="5.75" PointY="4.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.CustomerService" Width="1.5" PointX="10.75" PointY="10.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.CustomerServiceCategory" Width="1.5" PointX="12.75" PointY="12.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.DividendApply" Width="1.5" PointX="14.75" PointY="12.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.DividendPercentage" Width="1.5" PointX="5.75" PointY="1" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.DividendRecord" Width="1.5" PointX="8" PointY="1" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.FollowOrder" Width="1.5" PointX="7.5" PointY="7.375" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.GlobalSetting" Width="1.5" PointX="15.75" PointY="0.75" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.History" Width="1.5" PointX="0.75" PointY="15.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.InnerLotteryOpenTime" Width="1.5" PointX="5.25" PointY="14.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.Lottery" Width="1.5" PointX="3" PointY="8.875" Height="5.6340136718750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.LotteryCategory" Width="1.5" PointX="0.75" PointY="10.625" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.LotteryOpen" Width="1.5" PointX="5.25" PointY="17.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.LotteryOpenTime" Width="1.5" PointX="5.25" PointY="20.75" Height="3.1340950520833388" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.LotteryPlayingMethodPrize" Width="1.5" PointX="8.25" PointY="10.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.Message" Width="1.5" PointX="0.75" PointY="1" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.PlatformDividend" Width="1.5" PointX="11.75" PointY="15.75" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.PlayingCategory" Width="1.5" PointX="0.75" PointY="4.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.PlayingMethod" Width="1.5" PointX="3" PointY="4.25" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.PlayTogether" Width="1.5" PointX="7.5" PointY="14.75" Height="3.1340950520833388" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.ServerTime" Width="1.5" PointX="7.75" PointY="4.75" Height="1.5956835937500102" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.SystemBankAccount" Width="1.5" PointX="13" PointY="1.375" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.SystemPost" Width="1.5" PointX="16.75" PointY="12.75" Height="2.1725878906250102" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.UserAdvice" Width="1.5" PointX="13.75" PointY="16.75" Height="1.9802864583333246" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.UserBankAccount" Width="1.5" PointX="13" PointY="6.25" Height="3.1340950520833246" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.UserIncome" Width="1.5" PointX="15.25" PointY="4.375" Height="3.326396484374996" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.UserMessage" Width="1.5" PointX="3" PointY="1" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.UserPlayTogetherRecord" Width="1.5" PointX="9.75" PointY="14.5" Height="3.7109993489583246" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.WithdrawDeposit" Width="1.5" PointX="15.25" PointY="8.5" Height="2.749492187499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="bcbzModel.YCViewUser" Width="1.5" PointX="16.75" PointY="15.75" Height="5.8263151041666674" IsExpanded="true" />
+        <AssociationConnector Association="bcbzModel.FK_SystemBankAccount_BankId" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="5" />
+          <ConnectorPoint PointX="11.5" PointY="2.5574446614583337" />
+          <ConnectorPoint PointX="13" PointY="2.5574446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_UserBankAccount_BankId" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="6.9035953776041667" />
+          <ConnectorPoint PointX="13" PointY="6.9035953776041667" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_BetOrder_LotteryId" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="11.124705403645834" />
+          <ConnectorPoint PointX="5.25" PointY="11.124705403645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_BetOrder_PlayingMethodId" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="6.8961393229166674" />
+          <ConnectorPoint PointX="5.46875" PointY="6.8961393229166674" />
+          <ConnectorPoint PointX="5.46875" PointY="8.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_FollowOrder_OrderId" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="8.9324446614583337" />
+          <ConnectorPoint PointX="7.5" PointY="8.9324446614583337" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_PlayTogether_BetOrderId" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="13.374410807291667" />
+          <ConnectorPoint PointX="7.125" PointY="13.749410807291667" />
+          <ConnectorPoint PointX="7.125" PointY="16.317047526041669" />
+          <ConnectorPoint PointX="7.5" PointY="16.317047526041669" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_DividendRecord_DividendRecord" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="2.2785953776041659" />
+          <ConnectorPoint PointX="8" PointY="2.2785953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_InnerLotteryOpenTime_LotteryId" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="14.509013671875003" />
+          <ConnectorPoint PointX="3.75" PointY="15.836293945312502" />
+          <ConnectorPoint PointX="4.0729191666666669" PointY="15.836293945312502" />
+          <ConnectorPoint PointX="4.2395858333333329" PointY="15.836293945312502" />
+          <ConnectorPoint PointX="5.25" PointY="15.836293945312502" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_Lottery_CategoryId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="11.711293945312502" />
+          <ConnectorPoint PointX="3" PointY="11.711293945312502" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_LotteryOpen_LotteryId" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.1562525" PointY="14.509013671875003" />
+          <ConnectorPoint PointX="4.1562525" PointY="18.807444661458334" />
+          <ConnectorPoint PointX="5.25" PointY="18.807444661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_LotteryOpenTime_LotteryId" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.3437475" PointY="14.509013671875003" />
+          <ConnectorPoint PointX="3.3437475" PointY="22.317047526041669" />
+          <ConnectorPoint PointX="5.25" PointY="22.317047526041669" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_LotteryPlayingMethodPrize_LotteryId" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.972962239583335" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="13.972962239583335" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="13.972962239583335" />
+          <ConnectorPoint PointX="8.96875" PointY="13.972962239583335" />
+          <ConnectorPoint PointX="8.96875" PointY="12.989889322916667" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_LotteryPlayingMethodPrize_PlayingMethodId" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="4.46875" />
+          <ConnectorPoint PointX="9.53125" PointY="4.46875" />
+          <ConnectorPoint PointX="9.53125" PointY="10.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_UserMessage_MessageId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.086293945312498" />
+          <ConnectorPoint PointX="3" PointY="2.086293945312498" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_PlayingMethod_CategoryId" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="5.7401432291666694" />
+          <ConnectorPoint PointX="3" PointY="5.7401432291666694" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_UserPlayTogetherRecord_PlayTogether" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="16.317047526041669" />
+          <ConnectorPoint PointX="9.75" PointY="16.317047526041669" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_UserIncome_BankAccountId" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.5" PointY="7.0718489583333328" />
+          <ConnectorPoint PointX="15.25" PointY="7.0718489583333328" />
+        </AssociationConnector>
+        <AssociationConnector Association="bcbzModel.FK_WithdrawDeposit_BankAccountId" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.5" PointY="9.0381982421875" />
+          <ConnectorPoint PointX="15.25" PointY="9.0381982421875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="bcbzModel.UserPlayTogetherState" Width="1.5" PointX="17.375" PointY="3.75" Height="2.1725878906250102" />
+        <EntityTypeShape EntityType="bcbzModel.YeepayRecharge" Width="1.5" PointX="17.375" PointY="6.75" Height="1.9802864583333246" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

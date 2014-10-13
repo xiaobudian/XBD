@@ -21,6 +21,10 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -106,6 +110,7 @@
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\aqijs\aqi.js" />
+    <Content Include="Scripts\aqijs\myHighCharts.js" />
     <Content Include="Scripts\Highcharts-2.1.9\examples\area-basic.htm" />
     <Content Include="Scripts\Highcharts-2.1.9\examples\area-inverted.htm" />
     <Content Include="Scripts\Highcharts-2.1.9\examples\area-missing.htm" />
